@@ -8,11 +8,13 @@
 
 "use strict";
 
+let barkSound;
+
 /**
  * Description of preload
 */
 function preload() {
-
+    barkSound = loadSound('assets/sounds/bark.wav');
 }
 
 
@@ -30,4 +32,8 @@ function setup() {
 */
 function draw() {
 
+}
+
+function mousePressed(){
+    barkSound.play();
 }
