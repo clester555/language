@@ -9,6 +9,7 @@
 "use strict";
 
 let barkSound;
+let voice = new p5.speech();
 
 /**
  * Description of preload
@@ -36,4 +37,5 @@ function draw() {
 
 function mousePressed(){
     barkSound.play();
+    voice.speak('My queen is beautiful and sexy, plus she is always right.');
 }
