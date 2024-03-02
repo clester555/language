@@ -9,18 +9,14 @@
 "use strict";
 
 let barkSound;
-let voice = new p5.Speech();
-let foo = new p5.SpeechRec();
-let currentSpeech= '?';
-
+let prompt= 'R is for...?';
+let target = new Target();
 /**
  * Description of preload
 */
 function preload() {
     barkSound = loadSound('assets/sounds/bark.wav');
-    // foo.setLang('en-US');
-    foo.onResult = showResult;
-    foo.start();
+    target.setImage(loadImage('assets/images/clown.png'));
 }
 
 
@@ -29,7 +25,6 @@ function preload() {
 */
 function setup() {
     createCanvas(640,640);
-    
 }
 
 
@@ -38,17 +33,12 @@ function setup() {
 */
 function draw() {
     background(0,200,50);
-    textAlign(CENTER,CENTER);
+    // textAlign(RIGHT,TOP);
     textSize(36);
-    text(currentSpeech,width/2,height/2);
+    text(prompt,width/2,height/2);
+    image(target.image,100,100);
 }
 
 function mousePressed(){
-    // barkSound.play();
-    voice.speak('My queen is beautiful and sexy, plus she is always right.');
-}
-
-function showResult()
-{
-  currentSpeech = foo.resultString;
+    barkSound.play();
 }
