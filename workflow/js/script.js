@@ -10,7 +10,7 @@
 
 let canvasWidth = 1200;
 let canvasHeight = 600;
-let numOfPlayers = 2;
+let numOfPlayers = 6;
 let lastRound = 3;
 let player = [];
 let PURPLE = '#C456ED';
