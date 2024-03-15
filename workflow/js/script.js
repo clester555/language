@@ -69,8 +69,8 @@ function preload() {
 
     
     let pic = loadImage('assets/images/objects/happyFace.png');
-    player[0] = new Player('Ben',pic);
-    player[1] = new Player('Ashley', pic);
+    player[0] = new Player('Youzi',pic);
+    player[1] = new Player('Cola', pic);
     player[2] = new Player('Cici',pic);
     player[3] = new Player('Yiyang', pic);
     player[4] = new Player('Adam',pic);
