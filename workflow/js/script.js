@@ -114,7 +114,7 @@ function setup() {
  * Description of draw()
 */
 function draw() {
-    background(100,100,100);
+    background('#919191');
     if(round<=lastRound){
         for (let i = 0; i<6;i++){
             fill(colors[i]);
