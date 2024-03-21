@@ -8,17 +8,19 @@
 
 //"use strict";
 
-let canvasWidth = 600;
+let canvasWidth = 800;
 let canvasHeight = 600;
 let mazeWidth = 400;
 let mazeHeight = 400;
-let mazeLeft = 20;
-let mazeTop = 20;
-let cellSize = 50;
+let mazeLeft = 200;
+let mazeTop = 10;
+let cellSize = 40;
 let maze;
 let player;
 let arrows = [];
 let arrowSize = 50;
+let arrowLeft =325;
+let arrowTop = 425;
 let leftArrow, rightArrow, upArrow, downArrow;
 
 /**
@@ -38,10 +40,10 @@ function preload() {
 function setup() {
     createCanvas(canvasWidth,canvasHeight);
     maze = new Maze(mazeWidth,mazeHeight,mazeLeft,mazeTop,cellSize);
-    leftArrow = new Arrow(450,350,arrowSize);
-    rightArrow = new Arrow(650,350,arrowSize);
-    upArrow = new Arrow(550,250,arrowSize);
-    downArrow = new Arrow(550,450,arrowSize);
+    leftArrow = new Arrow(arrowLeft,arrowTop+arrowSize,arrowSize);
+    rightArrow = new Arrow(arrowLeft+arrowSize*2,arrowTop+arrowSize,arrowSize);
+    upArrow = new Arrow(arrowLeft+arrowSize,arrowTop,arrowSize);
+    downArrow = new Arrow(arrowLeft+arrowSize,arrowTop+arrowSize*2,arrowSize);
     arrows = [leftArrow,rightArrow,upArrow,downArrow];
 }
 

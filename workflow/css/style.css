@@ -19,6 +19,3 @@ body {
   overflow: hidden; /* Hide anything that goes off the window size */
 }
 
-* {
-  touch-action: manipulation;
-}
