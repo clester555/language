@@ -13,9 +13,7 @@ class Arrow{
     }
 
     draw(){
-        stroke(0,0,0);
-        noFill();
-        rect(this.x,this.y,this.size,this.size);
+        image(this.pic,this.x,this.y,this.size);
     }
 
     isHit(x,y){

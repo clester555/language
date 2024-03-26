@@ -8,18 +8,18 @@
 
 //"use strict";
 
-let canvasWidth = 800;
+let canvasWidth = 1000;
 let canvasHeight = 600;
 let mazeWidth = 400;
 let mazeHeight = 400;
-let mazeLeft = 200;
+let mazeLeft = 10;
 let mazeTop = 10;
 let cellSize = 40;
 let maze;
 let player;
 let arrows = [];
 let arrowSize = 50;
-let arrowLeft =325;
+let arrowLeft =135;
 let arrowTop = 425;
 let leftArrow, rightArrow, upArrow, downArrow;
 
@@ -31,6 +31,15 @@ function preload() {
     let pic = loadImage('assets/images/player.png');
     player.setPicture(pic);
     //   audioSound[i] = loadSound('assets/sounds/' + word[0] + '.wav'); 
+    leftArrow = new Arrow(arrowLeft,arrowTop+arrowSize,arrowSize);
+    rightArrow = new Arrow(arrowLeft+arrowSize*2,arrowTop+arrowSize,arrowSize);
+    upArrow = new Arrow(arrowLeft+arrowSize,arrowTop,arrowSize);
+    downArrow = new Arrow(arrowLeft+arrowSize,arrowTop+arrowSize*2,arrowSize);
+    upArrow.setPic(loadImage('assets/images/Arrow-Up.png'))
+    downArrow.setPic(loadImage('assets/images/Arrow-Down.png'));
+    leftArrow.setPic(loadImage('assets/images/Arrow-Left.png'))
+    rightArrow.setPic(loadImage('assets/images/Arrow-Right.png'));
+
 }
 
 
@@ -40,10 +49,7 @@ function preload() {
 function setup() {
     createCanvas(canvasWidth,canvasHeight);
     maze = new Maze(mazeWidth,mazeHeight,mazeLeft,mazeTop,cellSize);
-    leftArrow = new Arrow(arrowLeft,arrowTop+arrowSize,arrowSize);
-    rightArrow = new Arrow(arrowLeft+arrowSize*2,arrowTop+arrowSize,arrowSize);
-    upArrow = new Arrow(arrowLeft+arrowSize,arrowTop,arrowSize);
-    downArrow = new Arrow(arrowLeft+arrowSize,arrowTop+arrowSize*2,arrowSize);
+   
     arrows = [leftArrow,rightArrow,upArrow,downArrow];
 }
 
